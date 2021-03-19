@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>src="https://code.jquery.com/jquery-3.6.0.min.js"
+    </script>
+    <link rel="stylesheet" href="stylee.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"> 
+    <title>Maket3</title>
+</head>
+<body>
+   <header>
+    <div class="container">
+        <img src="images/Название__компании_самая_клевая_компания.png" alt="logo" width="273px" height="100px">
+        <div class="phone">
+            <p>+7(499) 777-77-77</p>
+            <p>+7(499) 777-77-77</p>
+            <a id="show-button" href="#">Обратная связь</a>
+        </div>
+    </div>
+   </header>
+
+   <div class="menuu">
+        <div class="menu-container container">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Прайс-лист</a></li>
+                <li><a href="#">Контакты</a></li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="flexform">
+            
+            <form id="form" action="#">
+                <div id="prompt-message"></div>
+                <h4>ОБРАТНАЯ СВЯЗЬ</h4>
+                <div>
+                    <label for="name">Ваше имя*</label>
+                    <input required type="text" placeholder="Поле обязательно для заполнения">
+                </div>
+                <div>
+                    <label for="name">Телефон*</label>
+                    <input required type="tel" placeholder="Поле обязательно для заполнения">
+                </div>
+                <div>
+                    <label for="name">Email*</label>
+                    <input required type="email" placeholder="Поле обязательно для заполнения">
+                </div>
+                <div>
+                    <label for="name">Сообщение</label>
+                    <input id="big" type="text">
+                </div>
+                <button type="submit">ОТПРАВИТЬ</button>
+            </form>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+   
+    <div class="slider">
+        <div id="slider_container">
+            <img id="sl" src="" class="sl" alt="slide">
+            <div class="button-slide container">
+                <a href="#"><img id="previous" src="images/left.png" alt="left"></a>
+                <a href="#"><img id="next" src="images/right.png" alt="right"></a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container catalog">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a class="current" href="#">Бытовая техника</a></li>
+            </ul> 
+        </div>
+
+        <div class="content">
+            <div class="leftblock">
+                <ul class="menu-left">
+                    <li><a href="#">Автомобили</a></li>
+                    <li><a  href="#">Бытовая техника</a>
+                         <ul class="content2">
+                            <li><a href="#">Микроволновки</a></li>
+                            <li><a href="#">Холодильники</a></li>
+                            <li><a href="#">Посудомоечные машины</a></li>
+                            <li><a href="#">Чайники</a></li>
+                         </ul>
+                    </li>   
+                    <li><a href="#">Мобильная техника</a></li>
+                    <li><a href="#">Компьютеры</a></li>
+                    <li><a href="#">Одежда</a></li>
+                    <li><a href="#">Недвижимость</a></li>
+                </ul>
+
+                <div class="price">
+                    <img src="images/MS_-_EXCEL.png" alt="price">
+                    <h4>Прайс-лист</h4>
+                </div>
+            </div>
+            <div class="empty"></div>
+            
+            <div class="centerblock">
+                <div class="tovar">
+                    <div class="card">
+                        <img class="photo" src="images/nophoto.png" alt="photo">
+                        <a href="#"><p class="about-tovar">Самый клевый чайник, который надо купить!</p></a>
+                        <div class="tovar-buy">
+                            <p class="cina">1 900 p.</p>
+                            <a href="#"><img src="images/addtobasket_mini.png" alt="tovar"></a>
+                        </div>   
+                    </div>
+                    <div class="card">
+                        <img class="photo" src="images/nophoto.png" alt="photo">
+                        <a href="#"><p class="about-tovar">Самый клевый чайник, который надо купить!</p></a>
+                        <div class="tovar-buy">
+                            <p class="cina">1 900 p.</p>
+                            <a href="#"><img src="images/addtobasket_mini.png" alt="tovar"></a>
+                        </div>   
+                    </div>
+                    <div class="card">
+                        <img class="photo" src="images/nophoto.png" alt="photo">
+                        <a href="#"><p class="about-tovar">Самый клевый чайник, который надо купить!</p></a>
+                        <div class="tovar-buy">
+                            <p class="cina">1 900 p.</p>
+                            <a href="#"><img src="images/addtobasket_mini.png" alt="tovar"></a>
+                        </div>   
+                    </div>
+                    <div class="card">
+                        <img class="photo" src="images/nophoto.png" alt="photo">
+                        <a href="#"><p class="about-tovar">Самый клевый чайник, который надо купить!</p></a>
+                        <div class="tovar-buy">
+                            <p class="cina">1 900 p.</p>
+                            <a href="#"><img src="images/addtobasket_mini.png" alt="tovar"></a>
+                        </div>   
+                    </div>
+                    <div class="card">
+                        <img class="photo" src="images/nophoto.png" alt="photo">
+                        <a href="#"><p class="about-tovar">Самый клевый чайник, который надо купить!</p></a>
+                        <div class="tovar-buy">
+                            <p class="cina">1 900 p.</p>
+                            <a href="#"><img src="images/addtobasket_mini.png" alt="tovar"></a>
+                        </div>   
+                    </div>
+                </div>
+
+                
+                <ul class="pager">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a class="cr" href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                </ul>
+
+                <div class="about-us">
+                    <div class="a1"> Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.характерные для этого жанра мотивы: неразделённой любви, ухода молодости, угасания души. 
+                    </div>
+                    <div class="a2">
+                    Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+
+
+    
+     
+
+    
+
+   
+
+
+
+   <footer>
+        <div class="container container_footer">
+            <div class="footer_left">
+                <p>&copy  2012–2013 ЗАО «Компания» </p>
+                <p>info@name.ru</p>
+            </div>
+            <div class="footer_menu">
+                <ul>
+                    <li><a href="#"></a>Главная</li>
+                    <li><a href="#"></a>Каталог</li>
+                    <li><a href="#"></a>Доставка и оплата</li>
+                    <li><a href="#"></a>Прайс-лист</li>
+                    <li><a href="#"></a>Контакты</li>
+                </ul>
+            </div>
+            <div class="footer_right">
+                <img src="images/company.png" alt="company">
+                <p><a href="">Разработка сайта — </a><br>
+                    компания «Пиксель Плюс»</p>
+            </div>
+        </div>
+   </footer>
+
+
+
+   
+</body>
+
+<script>
+    var images=['Слайд_1.png' , 'Слайд_2.png'];
+
+    var slider=document.querySelector('#slider_container');
+    var img=slider.querySelector('#sl');
+    img.src='images/' + images[0];
+    var i=1;
+
+    
+    
+    var slideInterval=setInterval(function(){
+
+        sl.src='images/' + images[i];
+
+        i++;
+
+        if(i==images.length) {
+            i=0;
+        }
+    }, 4000);
+
+    
+
+    var next = document.getElementById('next');
+    var previous = document.getElementById('previous');
+
+    function pauseSlideshow() {
+    playing = false;
+    clearInterval(slideInterval);
+    }
+     
+    next.onclick = function() {
+        pauseSlideshow();
+
+        
+        sl.src='images/' + images[i];
+        i++;
+        if(i==images.length) {
+            i=0;
+        };
+        img.classList.add("one");
+
+    }
+    previous.onclick = function() {
+        pauseSlideshow();
+        sl.src='images/' + images[i];
+        if(i==0) {
+            i=images.length;
+        };
+        i--;
+        img.classList.class("one");
+
+
+        
+    };
+
+
+
+
+
+
+
+    let modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    let btn = document.getElementById("show-button");
+
+    // Get the <span> element that closes the modal
+    let span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    document.getElementById('form').reset();
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    } 
+
+</script>
+</html>
