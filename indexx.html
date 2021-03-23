@@ -8,6 +8,8 @@
     </script>
     <link rel="stylesheet" href="stylee.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <title>Maket3</title>
 </head>
 <body>
@@ -64,14 +66,19 @@
     </div>
    
     <div class="slider">
-        <div id="slider_container">
-            <img id="sl" src="" class="sl" alt="slide">
-            <div class="button-slide container">
-                <a href="#"><img id="previous" src="images/left.png" alt="left"></a>
-                <a href="#"><img id="next" src="images/right.png" alt="right"></a>
-            </div>
+        <div class="slider-container">
+             <div>
+                 <img class="sl" src="images/Слайд_1.png"  alt="slide">
+             </div>
+             <div>
+                 <img  src="images/Слайд_2.png" class="sl" alt="slide">
+             </div>
         </div>
-    </div>
+        <div class="button-slide container">
+         </div>
+        
+     </div>
+ 
 
     
     <div class="container catalog">
@@ -213,61 +220,21 @@
    
 </body>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="slick/slick.min.js"></script>
 <script>
-    var images=['Слайд_1.png' , 'Слайд_2.png'];
-
-    var slider=document.querySelector('#slider_container');
-    var img=slider.querySelector('#sl');
-    img.src='images/' + images[0];
-    var i=1;
-
-    
-    
-    var slideInterval=setInterval(function(){
-
-        sl.src='images/' + images[i];
-
-        i++;
-
-        if(i==images.length) {
-            i=0;
-        }
-    }, 4000);
-
-    
-
-    var next = document.getElementById('next');
-    var previous = document.getElementById('previous');
-
-    function pauseSlideshow() {
-    playing = false;
-    clearInterval(slideInterval);
-    }
-     
-    next.onclick = function() {
-        pauseSlideshow();
-
-        
-        sl.src='images/' + images[i];
-        i++;
-        if(i==images.length) {
-            i=0;
-        };
-        img.classList.add("one");
-
-    }
-    previous.onclick = function() {
-        pauseSlideshow();
-        sl.src='images/' + images[i];
-        if(i==0) {
-            i=images.length;
-        };
-        i--;
-        img.classList.class("one");
-
-
-        
-    };
+    $('.slider-container').slick({
+      infinite: true,
+      dots: false,
+      autoplay:true,
+      autoplaySpeed:4000,
+      fade:true,
+      appendArrows: $('.button-slide'),
+      prevArrow: '<a href="#"><img id="previous" src="images/left.png" alt="left"></a>',
+      nextArrow: '<a href="#"><img id="next" src="images/right.png" alt="right"></a>',
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
 
 
 

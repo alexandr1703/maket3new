@@ -156,10 +156,12 @@ header img{
     
     background:#f8f8f8 ;
     height: 415px;
+    width: 100%;
+    
     
 }
 
-#slider_container{
+.slider_container{
     max-width: 1248px;
     margin: 0 auto;
     overflow: hidden;
@@ -175,75 +177,7 @@ header img{
     position: relative;
     top: -50px;
     z-index: 5;
-
-    
-    animation: fadein ease 4s;
-    -webkit-animation: fadein ease 4s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein ease 4s; /* Firefox < 16 */
-    -ms-animation: fadein ease 24; /* Internet Explorer */
-    -o-animation: fadein ease 4s; /* Opera < 12.1 */
-    animation-iteration-count: infinite;
-
-
 }
-
-.one{
-    animation: fadein ease 4s;
-    -webkit-animation: fadein ease 2s; 
-    -moz-animation: fadein ease 5s;
-    -ms-animation: fadein ease 2s; 
-    -o-animation: fadein ease 2s; 
-    animation-iteration-count: none; 
-}
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-}
-
-@keyframes fadeOut {
-  from {opacity:1;}
-  to {opacity:0;}
-}
-
-@-moz-keyframes fadeOut {
-  0% {opacity:1;}
-  100% {opacity:0;}
-}
-
-@-webkit-keyframes fadeOut {
-  0% {opacity:1;}
-  100% {opacity:0;}
-}
-
-@-o-keyframes fadeOut {
-  0% {opacity:1;}
-  100% {opacity:0;}
-}
-
-@-ms-keyframes fadeOut {
-  0% {opacity:1;}
-  100% {opacity:0;}
-}
-
-
-
 .button-slide{
     display: flex;
     justify-content: space-between;
