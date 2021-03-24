@@ -19,7 +19,7 @@
         <div class="phone">
             <p>+7(499) 777-77-77</p>
             <p>+7(499) 777-77-77</p>
-            <a id="show-button" href="#">Обратная связь</a>
+            <h4 id="show-button">Обратная связь</h4>
         </div>
     </div>
    </header>
@@ -113,7 +113,6 @@
                     <h4>Прайс-лист</h4>
                 </div>
             </div>
-            <div class="empty"></div>
             
             <div class="centerblock">
                 <div class="tovar">
@@ -253,6 +252,7 @@
     // When the user clicks on the button, open the modal
     btn.onclick = function() {
     modal.style.display = "block";
+    $(".modal").fadeIn(800);
     }
 
     // When the user clicks on <span> (x), close the modal
