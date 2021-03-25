@@ -45,21 +45,21 @@
                 <h4>ОБРАТНАЯ СВЯЗЬ</h4>
                 <div>
                     <label for="name">Ваше имя*</label>
-                    <input required type="text" placeholder="Поле обязательно для заполнения">
+                    <input  type="text" class="fname" id="fname">
                 </div>
                 <div>
                     <label for="name">Телефон*</label>
-                    <input required type="tel" placeholder="Поле обязательно для заполнения">
+                    <input  type="tel" class="number" id="number">
                 </div>
                 <div>
                     <label for="name">Email*</label>
-                    <input required type="email" placeholder="Поле обязательно для заполнения">
+                    <input  type="name" class="user_email" id="user_email" >
                 </div>
                 <div>
                     <label for="name">Сообщение</label>
-                    <input id="big" type="text">
+                    <textarea name="" id="big" cols="30" rows="10"></textarea>
                 </div>
-                <button type="submit">ОТПРАВИТЬ</button>
+                <button id="send" type="submit">ОТПРАВИТЬ</button>
             </form>
             <span class="close">&times;</span>
         </div>
@@ -182,14 +182,6 @@
      
 
 
-    
-     
-
-    
-
-   
-
-
 
    <footer>
         <div class="container container_footer">
@@ -220,6 +212,7 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script src="slick/slick.min.js"></script>
 <script>
     $('.slider-container').slick({
@@ -251,8 +244,8 @@
 
     // When the user clicks on the button, open the modal
     btn.onclick = function() {
-    modal.style.display = "block";
-    $(".modal").fadeIn(800);
+    modal.style.display = "flex";
+    
     }
 
     // When the user clicks on <span> (x), close the modal
@@ -267,6 +260,55 @@
         modal.style.display = "none";
     }
     } 
+
+
+
+$("#send").click(function() {
+  let name= $(".fname").val();
+  let telephone= $(".number").val();
+  let email= $(".user_email").val();
+  let nameReg = /^[a-zA-Z\u0401\u0451\u0410-\u044f]{2,40}$/;
+  let regMail = /^\S+@\S+\.\S+$/;
+  let regPhone = /^[0-9\-\+]{9,15}$/;
+  let errorArray = [0, 0, 0];
+  if (name==null || name=="" || name.search(nameReg)){
+    $(".fname").attr("placeholder", "Поле обязательно до заполнения");
+    $(".fname").addClass("wrong_inp");
+    $(".closed").removeClass("sended");
+    errorArray[0] = 1;
+  } else {
+    $(".fname").removeClass("wrong_inp");
+    errorArray[0] = 0;
+  }
+   if(telephone==null || telephone=="" || telephone.search(regPhone)){
+
+    $(".number").attr("placeholder", "Поле обязательно до заполнения");
+    $(".number").addClass("wrong_inp");
+    $(".closed").removeClass("sended");
+    errorArray[1] = 1;
+  } else {
+    $(".number").removeClass("wrong_inp");
+    errorArray[1] = 0;
+  }
+   if (email==null || email=="" || email.search(regMail)) {
+    $(".user_email").attr("placeholder", "Поле обязательно до заполнения");
+    $(".user_email").addClass("wrong_inp");
+    $(".closed").removeClass("sended");
+    errorArray[2] = 1;
+  } else {
+    $(".user_email").removeClass("wrong_inp");
+    errorArray[2] = 0;
+  }
+  if (errorArray[0] == 0 && errorArray[1] == 0 && errorArray[2] == 0) {
+    $(".user_email").removeClass("wrong_inp");
+    $(".fname").removeClass("wrong_inp");
+    $(".number").removeClass("wrong_inp");
+    $(".closed").addClass("sended");
+    return true;
+  }
+});
+
+
 
 </script>
 </html>

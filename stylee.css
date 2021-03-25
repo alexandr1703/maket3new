@@ -99,9 +99,7 @@ header{
     cursor: pointer;
  }
 
- .phone a:active form {
-    display: block;
- }
+ 
  
 
 header img{
@@ -440,43 +438,42 @@ form input{
     padding-left: 10px;
     padding-right: 10px;
 }
-form input:invalid{
-    -webkit-box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75);
-    -moz-box-shadow:inset 0 0 13px rgba(228, 106, 106, 0.75);
-    box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75);
+.error{
     
-
 }
-
-form input :focus{
-    border: none;
-}
-
-form input:focus:invalid{
-    border: 3px solid #d85a5a;
-}
-form input:not(:focus):invalid{
-    border: 1px solid #c3c3c3;
-    background:#fff ;
-    box-shadow: none;
-}
-::placeholder { 
-    color: white;
-    margin: 10px;
-}
-  
-:focus::placeholder { 
+.error::placeholder { 
     color: #d42c2c;
     font-family: "PT Sans";
     font-size: 14px;
     font-style: italic;
     
+}  
+
+form input :focus{
+    border: none;
 }
- 
+
+.wrong_inp{
+    -webkit-box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75);
+    -moz-box-shadow:inset 0 0 13px rgba(228, 106, 106, 0.75);
+    box-shadow: inset 0 0 13px rgba(228, 106, 106, 0.75);
+    border: 2px solid #d85a5a;
+}
+::placeholder { 
+    margin: 10px;
+    color: #d42c2c;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-style: italic;
+}
+  
 #big{
     height: 140px;
     text-align: start;
-    
+    resize: none;
+    width: 100%;
+    padding: 10px;
+   
 }
 form button{
     display: block;
@@ -494,11 +491,12 @@ form button{
     position: fixed;
     width: 100%; 
     height: 100%; 
-    padding-top: 260px;
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
     z-index: 200;
+    align-items: center;
+    justify-content: center;
 
     animation: fadein ease 4s;
     -webkit-animation: fadein ease 4s; /* Safari, Chrome and Opera > 12.1 */
@@ -506,6 +504,12 @@ form button{
     -ms-animation: fadein ease 4s; /* Internet Explorer */
     -o-animation: fadein ease 4s; /* Opera < 12.1 */
 }
+/* .phone a:active .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ } */
+
 
   #form{
     display: block;
@@ -581,6 +585,7 @@ form button{
     width: 520px;
     margin: auto auto;
     display: flex;
+    align-items: center;
     flex-direction: column-reverse;
     justify-content: space-around;
     box-sizing: border-box;
